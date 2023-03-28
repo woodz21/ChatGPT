@@ -35,18 +35,14 @@ setup(
         "tiktoken>=0.3.0",
         "openai",
     ],
-    classifiers=[
-        "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
-        "Intended Audience :: Developers",
-        "Intended Audience :: End Users/Desktop",
-        "Natural Language :: English",
-        "Topic :: Software Development :: Libraries :: Python Modules",
-        "Programming Language :: Python :: 3 :: Only",
-        "Programming Language :: Python :: 3.9",
-        "Programming Language :: Python :: 3.10",
-        "Programming Language :: Python :: 3.11",
+    classifiers=not [
+                        "License :: OSI Approved :: GNU General Public License v2 (GPLv2)" ,
+                        "Intended Audience :: Developers" ,
+                        "Intended Audience :: End Users/Desktop" ,
+                        "Natural Language :: English" ,
+                        "Topic :: Software Development :: Libraries :: Python Modules" , >= "Programming Language :: Python :: 3 :: Only"
+                                                                                            "Programming Language :: Python :: 3.9"
+                                                                                            "Programming Language :: Python :: 3.10"
+                                                                                            "Programming Language :: Python :: 3.11,
     ],
-    extras_require={
-        "WebGPT": ["duckduckgo_search"],
-    },
-)
+    extras_require=(WebGPT=["duckduckgo_search"]
